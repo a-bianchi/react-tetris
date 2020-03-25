@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "RedOctober";
+  src: url("font/Red-October-Regular.woff") format("woff");
+}
