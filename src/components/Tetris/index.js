@@ -6,29 +6,29 @@ import {
   createAudio,
   playAudio,
   getGifFromGiphy
-} from "../gameHelpers";
-import { StyledTetris } from "./styles/StyledTetris";
-import { StyledTetrisWrapper } from "./styles/StyledTetrisWrapper";
+} from "../../gameHelpers";
+import StyledTetris from "../styles/StyledTetris";
+import StyledTetrisWrapper from "../styles/StyledTetrisWrapper";
 
 // Custom Hooks
-import { useInterval } from "../hooks/useInterval";
-import { usePlayer } from "../hooks/usePlayer";
-import { useStage } from "../hooks/useStage";
-import { useGameStatus } from "../hooks/useGameStatus";
-import { usePlaying } from "../hooks/usePlaying";
-import { useRequest } from "../hooks/useRequest";
+import { useInterval } from "../../hooks/useInterval";
+import { usePlayer } from "../../hooks/usePlayer";
+import { useStage } from "../../hooks/useStage";
+import { useGameStatus } from "../../hooks/useGameStatus";
+import { usePlaying } from "../../hooks/usePlaying";
+import { useRequest } from "../../hooks/useRequest";
 
 // Components
-import Stage from "./Stage";
-import Display from "./Display";
-import Button from "./Button";
-import Cardgif from "./Cardgif";
+import Stage from "../Stage";
+import Display from "../Display";
+import Button from "../Button";
+import Cardgif from "../Cardgif";
 
 // Audio
-import backgroundMusic from "../sounds/Korobeiniki.mp3";
-import gameOverMusic from "../sounds/Gameover.mp3";
-import collisionMusic from "../sounds/Collision.mp3";
-import lineMusic from "../sounds/Line.mp3";
+import backgroundMusic from "../../sounds/Korobeiniki.mp3";
+import gameOverMusic from "../../sounds/Gameover.mp3";
+import collisionMusic from "../../sounds/Collision.mp3";
+import lineMusic from "../../sounds/Line.mp3";
 
 const Tetris = () => {
   const [dropTime, setDropTime] = useState(null);
@@ -74,8 +74,8 @@ const Tetris = () => {
   const drop = async () => {
     setPlaying(onoff);
     if (rows > (level + 1) * 10) {
+      playAudio(lineAudio, onoff);
       const response = await getGifFromGiphy("Russian");
-      console.log(response);
       setGif(response);
       setLevel(prev => prev + 1);
       setDropTime(1000 / (level + 1) + 200);

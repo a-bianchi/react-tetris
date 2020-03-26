@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledTetris = styled.div`
+const StyledTetris = styled.div`
   display: flex;
   align-items: flex-start;
   padding: 40px;
@@ -14,3 +14,5 @@ export const StyledTetris = styled.div`
     padding: 0 20px;
   }
 `;
+
+export default StyledTetris;

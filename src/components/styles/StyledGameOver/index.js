@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledGameOver = styled.div`
+const StyledGameOver = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,3 +16,5 @@ export const StyledGameOver = styled.div`
   border: 4px solid #333;
   font-family: RedOctober, Arial, Helvetica, sans-serif;
 `;
+
+export default StyledGameOver;

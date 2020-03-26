@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const StyledStage = styled.div`
+const StyledStage = styled.div`
   display: grid;
   grid-template-rows: repeat(
     ${props => props.height},
@@ -13,3 +13,5 @@ export const StyledStage = styled.div`
   max-width: 25vw;
   background: #111;
 `;
+
+export default StyledStage;

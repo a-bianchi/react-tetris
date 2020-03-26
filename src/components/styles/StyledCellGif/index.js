@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledCellGif = styled.div`
+const StyledCellGif = styled.div`
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -10,6 +10,7 @@ export const StyledCellGif = styled.div`
   min-height: 150px;
   width: 100%;
   border-radius: 20px;
-  color: ${props => (props.gameOver ? "red" : "#999")};
   background: #000;
 `;
+
+export default StyledCellGif;
