@@ -64,7 +64,7 @@ yarn e2e
 👤 **Alejo Bianchi <alejobianchi@gmail.com>**
 
 - Twitter: [@Alejo40740246](https://twitter.com/Alejo40740246)
-- Github: [@Abianchi](https://github.com/a-bianchi)
+- Github: [@a-bianchi](https://github.com/a-bianchi)
 
 ## Show your support
 
